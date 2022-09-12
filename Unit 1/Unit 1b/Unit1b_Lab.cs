@@ -2,18 +2,26 @@ using System;
 					
 public class Program
 {
+	public Operations myOperator;
+	
 	public void Main()
 	{
+		myOperator = new Operations();
+		
 		Console.WriteLine("Welcome back Mechwarrior");
-		DoMath(052,4);
-		DoMath(074,2);
-		DoMath(090,9);
-		Compare(120,210);
-		Compare(210,120);
-		CheckPassword("FedCom3040");
-		CheckPassword("Cappellan39");
+		myOperator.DoMath(052,4);
+		myOperator.DoMath(074,2);
+		myOperator.DoMath(090,9);
+		myOperator.Compare(120,210);
+		myOperator.Compare(210,120);
+		myOperator.CheckPassword("FedCom3040");
+		myOperator.CheckPassword("Cappellan39");
 	}
 	
+	
+}
+
+public class Operations {
 	public void DoMath (int value, int value2) {
 		
 		var number = value + value2;
@@ -35,4 +43,5 @@ public class Program
 			Console.WriteLine("Incorrect Password");		
 		}
 	}
+
 }
