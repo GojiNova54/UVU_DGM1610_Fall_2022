@@ -2,10 +2,16 @@ using System;
 					
 public class Program
 {
+	public GameStates gameStates;
+	
 	public Operations myOperator;
 	
 	public void Main()
 	{
+		gameStates = new GameStates();
+		gameStates.currentState = GameStates.States.Starting;
+		gameStates.CheckState();
+		
 		myOperator = new Operations();
 		
 		Console.WriteLine("Welcome back Mechwarrior");
@@ -20,6 +26,31 @@ public class Program
 	
 	
 }
+
+public class GameStates {
+
+	public enum States {
+		Starting,
+		Playing,
+		Ending,
+	}
+
+	public States currentState = States.Starting;
+
+	public void CheckState () {
+		switch (currentState) {
+			case States.Starting:
+				Console.WriteLine("Starting");
+				break;
+			case States.Playing:
+				Console.WriteLine("Playing");
+				break;
+			case States.Ending:
+				Console.WriteLine("Ending");
+				break;
+		
+		}
+}}
 
 public class Operations {
 	public void DoMath (int value, int value2) {
