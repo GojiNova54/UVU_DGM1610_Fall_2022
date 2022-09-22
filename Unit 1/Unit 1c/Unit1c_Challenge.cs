@@ -14,7 +14,7 @@ public class Program
 		
 		Console.WriteLine("Following BattleMechs are available for deployment:");
 			
-		string[] mechs = {"Mercury (20)" , "Mongoose (25)" , "Phoenix Hawk (45)" , "Kintaro (55)" , "Champion (60)" , "Black Knight (75)" , "Nighstar (95)" , "King Crab (100)"};
+		string[] mechs = {"Mercury (20)" , "Mongoose (25)" , "Phoenix Hawk (45)" , "Kintaro (55)" , "Champion (60)" , "Black Knight (75)" , "Nightstar (95)" , "King Crab (100)"};
 		Console.WriteLine(mechs.Length);
 		foreach(var mech in mechs) {
 			Console.WriteLine(mech);
