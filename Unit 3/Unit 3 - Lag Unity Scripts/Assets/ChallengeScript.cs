@@ -5,15 +5,20 @@ using UnityEngine;
 public class ChallengeScript : MonoBehaviour
 {
     int missionTime = 24;
-   
-    void Start ()
+    int numEnemies = 10;
+    void Start()
     {
         Debug.Log("Entering Europa Exclusion Zone...");
         missionTime = DivideByTwo(missionTime);
         Debug.Log("Mission Time has been reduced to 12 hours.");
+
+        for (int i = 0; i < numEnemies; i++)
+        {
+            Debug.Log("Number of unknown entities have appeared on sonar: " + i);
+        }
     }
-    
-    int DivideByTwo (int number)
+
+    int DivideByTwo(int number)
     {
         int result;
         result = number / 2;
@@ -24,7 +29,7 @@ public class ChallengeScript : MonoBehaviour
     float decreasedDepthLimit = 600;
     float nominalDepthLimit = 100;
 
-    void Update ()
+    void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
             DepthTest();
@@ -32,7 +37,7 @@ public class ChallengeScript : MonoBehaviour
         subDepth -= Time.deltaTime * 40;
     }
 
-    void DepthTest () 
+    void DepthTest()
     {
         if (subDepth > decreasedDepthLimit)
         {
@@ -44,9 +49,12 @@ public class ChallengeScript : MonoBehaviour
             print("Warning, approaching unbreachable surface.");
         }
 
-        else 
+        else
         {
             print("Submarine is at nominal depth.");
         }
     }
+
 }
+
+    
