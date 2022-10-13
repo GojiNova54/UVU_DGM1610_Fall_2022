@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Godzilla
   description: King of the Monsters
-  artwork: {fileID: 21300000, guid: b7cae8c5f99ca4645aa8f35464428d4e, type: 3}
+  artwork: {fileID: 21300000, guid: 16dd44225c167f44891ea1197a1cdffa, type: 3}
   attack: 10
   health: 8
   speed: 5
