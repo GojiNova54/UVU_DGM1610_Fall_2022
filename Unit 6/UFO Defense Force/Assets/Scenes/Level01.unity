@@ -431,8 +431,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontalInput: 0
+  verticalInput: 0
   speed: 25
   xRange: 27
+  zRange: 15
   blaster: {fileID: 1708603873}
   laserBolt: {fileID: 6877994332874343838, guid: f115e88f96ff578409b8ab79871618bc, type: 3}
 --- !u!4 &1145378397 stripped

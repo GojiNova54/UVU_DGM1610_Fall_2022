@@ -6,9 +6,13 @@ public class PlayerController : MonoBehaviour
 {
     public float horizontalInput;
 
+    public float verticalInput;
+
     public float speed = 25;
 
     public float xRange =27;
+
+    public float zRange = 15;
 
     public Transform blaster;
     
@@ -21,8 +25,14 @@ public class PlayerController : MonoBehaviour
         // Set HorizontalInput
         horizontalInput = Input.GetAxis("Horizontal");
 
+        // Set VerticalInput
+        verticalInput = Input.GetAxis("Vertical");
+
         // Moves Player left and right
         transform.Translate(Vector3.right *horizontalInput *Time.deltaTime * speed);
+
+        // Moves Player up and down
+        transform.Translate(Vector3.forward *verticalInput * Time.deltaTime * speed);
 
         //Keep Player within bounds
         //Left Side
@@ -35,6 +45,18 @@ public class PlayerController : MonoBehaviour
         if (transform.position.x > xRange)
         {
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
+        }
+
+        // Top Side
+        if (transform.position.z > zRange)
+        {
+            transform.position = new Vector3 (transform.position.x, transform.position.y, zRange);
+        }
+
+        // Bottom Side
+        if (transform.position.z < -zRange)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, -zRange);
         }
 
         // Spacebar to fire laser bolt
