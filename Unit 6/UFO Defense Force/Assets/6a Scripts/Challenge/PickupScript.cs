@@ -8,7 +8,7 @@ public class PickupScript : MonoBehaviour
     {
         if (collider.gameObject.tag == "Player") 
         {
-            print("Health Picked Up");
+            print("Pickup obtained");
             Destroy(gameObject);
            
         }
