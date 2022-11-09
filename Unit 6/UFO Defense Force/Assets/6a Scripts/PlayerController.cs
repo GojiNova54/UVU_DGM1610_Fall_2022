@@ -17,9 +17,16 @@ public class PlayerController : MonoBehaviour
     public Transform blaster;
     
     public GameObject laserBolt;
-    
 
-    
+    public GameManager gameManager;
+
+
+    void Start()
+    {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
+
+
     void Update()
     {
         // Set HorizontalInput
@@ -60,7 +67,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // Spacebar to fire laser bolt
-        if (Input.GetKeyDown(KeyCode.Space)) 
+        if (Input.GetKeyDown(KeyCode.Space) && gameManager.isGameOver == false)
         {
             // Create laser bolt at the blaster position
             Instantiate(laserBolt, blaster.transform.position, laserBolt.transform.rotation);

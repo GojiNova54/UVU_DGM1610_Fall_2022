@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 9079216072420963219}
   - component: {fileID: 4449590756148733765}
   - component: {fileID: 4841612757274810744}
-  - component: {fileID: 2619358595487346242}
   - component: {fileID: -6935074663811521143}
   - component: {fileID: -5002998557281031368}
+  - component: {fileID: -714899606707807541}
   m_Layer: 0
   m_Name: PowerUpPickup
   m_TagString: Untagged
@@ -130,20 +130,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2619358595487346242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4373155753642029463}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e9b4d444f946cc4fae6c2b46d213ee5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  topBounds: 30
-  lowerBounds: -10
 --- !u!114 &-6935074663811521143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,3 +159,17 @@ MonoBehaviour:
   startColor: {r: 1, g: 0.95401406, b: 0.4669811, a: 1}
   endColor: {r: 0.4056604, g: 0.40017557, b: 0, a: 1}
   speed: 3.4
+--- !u!114 &-714899606707807541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4373155753642029463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 657a05c49f45fe848a18098c9db43f1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  topBounds: 30
+  lowerBounds: -20
