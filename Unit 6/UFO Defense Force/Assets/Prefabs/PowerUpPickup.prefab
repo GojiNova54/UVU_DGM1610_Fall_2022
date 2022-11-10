@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1305172993209027017}
   - component: {fileID: 3363913569326238874}
   - component: {fileID: 9194162035865862547}
-  - component: {fileID: 9079216072420963219}
   - component: {fileID: 4449590756148733765}
   - component: {fileID: 4841612757274810744}
   - component: {fileID: -6935074663811521143}
@@ -19,7 +18,7 @@ GameObject:
   - component: {fileID: -714899606707807541}
   m_Layer: 0
   m_Name: PowerUpPickup
-  m_TagString: Untagged
+  m_TagString: Pickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89,18 +88,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &9079216072420963219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4373155753642029463}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a09b5ec38a4084b47add3814b24cbaa5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &4449590756148733765
 Rigidbody:
   m_ObjectHideFlags: 0
