@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
 
     public GameManager gameManager;
 
-    [SerializeField] private AudioSource shootSoundEffect;
+    
 
     void Start()
     {
@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour
             // Create laser bolt at the blaster position
             Instantiate(laserBolt, blaster.transform.position, laserBolt.transform.rotation);
 
-            shootSoundEffect.Play(); // Plays shoot sound for laser bolt
+            AudioManager.Instance.PlaySFX("Laser"); // Plays sound when laser bolt is fired
         }
 
         

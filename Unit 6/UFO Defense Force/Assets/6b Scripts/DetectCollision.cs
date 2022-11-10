@@ -11,7 +11,7 @@ public class DetectCollision : MonoBehaviour
 
     
 
-    [SerializeField] private AudioSource destroySoundEffect;
+    
 
     void Start()
     {
@@ -22,7 +22,7 @@ public class DetectCollision : MonoBehaviour
     void OnTriggerEnter(Collider other) // Once the Trigger has been entered, records collision in the argument var "other"
     {
         scoreManager.IncreaseScore(scoreToGive); // Increases score
-        destroySoundEffect.Play();
+        AudioManager.Instance.PlaySFX("Explosion"); // Plays sound when UFO is destroyed
         Destroy(gameObject);
         
     }

@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class PickupScript2 : MonoBehaviour
 {
-    [SerializeField] private AudioSource pickupSoundEffect;
+    
+
+    
+
+    
+    
 
     public void OnTriggerEnter(Collider collider) 
     {
         if (collider.gameObject.tag == "Pickup")
 
-            pickupSoundEffect.Play();  // Plays pickup sound on trigger
+            AudioManager.Instance.PlaySFX("Pickup"); // Plays sound when pickup is picked up
             Destroy(collider.gameObject);
     }
 
