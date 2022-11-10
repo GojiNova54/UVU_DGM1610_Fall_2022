@@ -10,7 +10,7 @@ public class PickupScript2 : MonoBehaviour
     {
         if (collider.gameObject.tag == "Pickup")
 
-            pickupSoundEffect.Play();
+            pickupSoundEffect.Play();  // Plays pickup sound on trigger
             Destroy(collider.gameObject);
     }
 

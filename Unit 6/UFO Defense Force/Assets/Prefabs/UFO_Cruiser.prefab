@@ -160,7 +160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreManager: {fileID: 0}
   scoreToGive: 10
-  destroySoundEffect: {fileID: 0}
+  destroySoundEffect: {fileID: -1563377293327692833}
 --- !u!82 &-1563377293327692833
 AudioSource:
   m_ObjectHideFlags: 0

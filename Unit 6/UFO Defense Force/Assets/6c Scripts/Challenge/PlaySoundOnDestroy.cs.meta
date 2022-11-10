@@ -1,9 +1,10 @@
 fileFormatVersion: 2
-guid: 332c2c7cf896df7439520a06ffa57750
+guid: b247b37dabd15474b9e397fa6d54ed0a
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - destroySoundEffect: {fileID: 8300000, guid: 38eb3ce977e73a54a8b2c638bc63509e, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
