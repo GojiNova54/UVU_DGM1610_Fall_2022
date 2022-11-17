@@ -9,6 +9,8 @@ public class MatchBehaviour : MonoBehaviour
     public ID idObj;
     public UnityEvent matchEvent, noMatchEvent, noMatchDelayedEvent;
 
+    public GameManager gameManager;
+
     private IEnumerator OnTriggerEnter(Collider other)
     {
         var tempObj = other.GetComponent<IDContainerBehaviour>();
@@ -26,6 +28,7 @@ public class MatchBehaviour : MonoBehaviour
             noMatchEvent.Invoke();
             yield return new WaitForSeconds(0.5f);
             noMatchDelayedEvent.Invoke();
+            gameManager.gameOver();
         }
     }
 }
