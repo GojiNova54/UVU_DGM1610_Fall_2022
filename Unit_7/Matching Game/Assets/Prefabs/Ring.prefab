@@ -15,10 +15,10 @@ GameObject:
   - component: {fileID: 8029823634127499218}
   - component: {fileID: 4091997390723584015}
   - component: {fileID: 7239213848011333583}
-  - component: {fileID: -4184025548567452043}
+  - component: {fileID: 946231302134787045}
   m_Layer: 7
   m_Name: Ring
-  m_TagString: Untagged
+  m_TagString: Ring
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,8 +101,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.56, y: 2.56, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.7283185, y: 1.8392093, z: 0.2}
+  m_Center: {x: -0.41584074, y: 0.3603953, z: 0}
 --- !u!114 &246376364560221583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea580963b7e46fc4cbcf7675eb844bd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seconds: 3
+  seconds: 4
 --- !u!54 &8029823634127499218
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -144,6 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb23b5d3a72f5c4a9aa3b8e4c6311af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rendererObj: {fileID: 0}
 --- !u!114 &7239213848011333583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,7 +178,7 @@ MonoBehaviour:
   disableEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &-4184025548567452043
+--- !u!114 &946231302134787045
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -186,11 +187,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 8418923384877051708}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 559e10b423885fb4b8dab0051afd6d74, type: 3}
+  m_Script: {fileID: 11500000, guid: 85b2a87fb4a56624cae7d910a843cbf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   idObj: {fileID: 0}
-  startEvent:
+  matchEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 946231302134787045}
+        m_TargetAssemblyTypeName: ColorMatchBehaviour, Assembly-CSharp
+        m_MethodName: ChangeColor
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  noMatchEvent:
     m_PersistentCalls:
       m_Calls: []
+  noMatchDelayedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  gameManager: {fileID: 0}
   colorIDDataListObj: {fileID: 11400000, guid: 8b796b900b7770c4b9d59a143cedc296, type: 2}
