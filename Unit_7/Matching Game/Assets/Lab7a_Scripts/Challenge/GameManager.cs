@@ -6,7 +6,6 @@ public class GameManager : MonoBehaviour
 {
     public GameObject gameOverUI;
     
-
     public void gameOver() 
     {
         gameOverUI.SetActive(true);
